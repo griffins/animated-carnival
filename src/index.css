@@ -1,13 +1,110 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    margin: 0;
+    font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.app-bar {
+    background: teal;
+    color: white;
+    padding: 16px;
+}
+
+.title {
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.subtitle {
+    margin: 0;
+}
+
+.book {
+    padding: 16px;
+    font-size: 24px;
+    width: 100%;
+}
+
+.book .navigation {
+    display: flex;
+    justify-content: space-between;
+}
+
+.page {
+    margin: 8px;
+    flex: 1;
+    border: solid 2px teal;
+    border-radius: 4px;
+}
+
+.page > p {
+    font-weight: 300;
+    background: teal;
+    color: white;
+    padding: 8px 16px;
+    margin: 0;
+}
+
+.page > .tokens {
+    padding: 16px;
+}
+
+.book .hints {
+    font-size: 14px;
+    color: gray;
+    margin: 16px 0;
+}
+
+.book .hints * {
+    margin: 0;
+}
+
+.content {
+    display: flex;
+    margin: 0 -8px;
+}
+
+.tokens > .token {
+    cursor: pointer;
+}
+
+.tokens > .token:hover {
+    text-decoration: underline teal;
+}
+
+button {
+    display: inline-block;
+    padding: 0.5em 1.5em;
+    border: 0.1em solid #FFFFFF;
+    box-sizing: border-box;
+    font-weight: 600;
+    color: #FFFFFF;
+    transition: all 0.2s;
+    background-color: teal;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background-color: rgb(1, 87, 87);
+}
+
+button:active {
+    background-color: rgb(2, 154, 154);
+}
+
+@media (min-width: 1300px) {
+    .container h2,
+    .container h3,
+    .container .book {
+        margin: auto;
+        max-width: 1300px;
+    }
 }
